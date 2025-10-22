@@ -1,13 +1,4 @@
-/* @import url(./styles/about.css);
-@import url(./styles/base.css);
-@import url(./styles/footer.css);
-@import url(./styles/header.css);
-@import url(./styles/hero.css);
-@import url(./styles/main.css);
-@import url(./styles/plans.css);
-@import url(./styles/testimonials.css);
-@import url(./styles/certificates.css);
-@import url(./styles/global.css); */
+
 :root {
     --color-primary: #ffcc29;
     --color-primary-dark: #e6b825;
@@ -580,9 +571,6 @@ p {
 }
 
 .footer-socials a:hover {
-    background-color: #ffcc29;
-    /* Sua cor primária */
-    /* Removemos o 'color: #111;' pois não afeta a <img> */
     transform: scale(1.05) translateY(-2px);
 }
 
@@ -703,4 +691,5 @@ p {
     .plan-card.featured {
         transform: scale(1.05);
     }
+
 }
