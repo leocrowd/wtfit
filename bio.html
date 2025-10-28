@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WTFit | Impleentação e Desenvolviento</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/WT-mobile.svg" />
+    <link rel="canonical" href="https://nopx.com.br/">
+
+
+    <meta property="og:title" content="Criação de sites">
+    <meta property="og:description" content="Criação de sites, aplicativos e landing pages">
+    <meta property="og:image" content="https://nopx.com.br/assets/icons/logo-social.png">
+    <meta property="og:url" content="https://wtfit.nopx.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bio.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <img src="./assets/logo-bio.png" alt="Perfil" class="profile-bg">
+            <button id="compartilhar">
+                <i class="ph-bold ph-share-network"></i>
+                Compartilhar
+            </button>
+        </header>
+
+
+        <section class="links-section">
+            <div class="link-card scroll">
+                <div class="card-content">
+                    <h3 class="card-title">Site Oficial WT Fit</h3>
+                    <p class="card-description">Conheça nossos planos.</p>
+                    <a class="card-button" href="https://wtfit.nopx.com.br/">
+                        <i class="ph-bold ph-globe-simple"></i>
+                        ACESSAR
+                    </a>
+                </div>
+            </div>
+
+            <div class="link-card right scroll">
+                <div class="card-content">
+                    <h3 class="card-title">Atendimento via WhatsApp</h3>
+                    <p class="card-description">Esclareça dúvidas ou solicite planos.
+                    </p>
+                    <a class="card-button"
+                        href="https://wa.me/554899544185?text=Ol%C3%A1%2C%20quero%20mudar%20de%20vida!">
+                        <i class=" ph-bold ph-whatsapp-logo"></i>
+                        Mensagem</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer com redes sociais -->
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://www.instagram.com/wtfitoficial/" class="social-link scroll" target="_blank">
+                    <i class="ph ph-instagram-logo"></i>
+                </a>
+                <a href="https://www.youtube.com/@wislleytrabuco456" class="social-link scroll" target="_blank">
+                    <i class="ph ph-youtube-logo"></i>
+                </a>
+                </a>
+                <a href="https://www.tiktok.com/@wislleytrabuco23" class="social-link scroll" target="_blank">
+                    <i class="ph ph-tiktok-logo"></i>
+                </a>
+            </div>
+
+            <p class="copy">
+                &copy; 2025 Todos os direitos reservados. Desenvolvido por
+                <a href="https://nopx.com.br/">NOPX</a>.
+            </p>
+        </footer>
+    </div>
+    <script>
+        ScrollReveal().reveal('.scroll', {
+            origin: 'bottom',
+            distance: '50px',
+            duration: 800,
+            interval: 150,
+            easing: 'ease-out',
+            reset: true
+        });
+
+        const btn = document.getElementById('compartilhar');
+        btn.addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'Confira meu link na bio!',
+                        text: 'Acesse todos os meus conteúdos aqui',
+                        url: window.location.href
+                    });
+                } catch (err) {
+                    console.log('Erro ao compartilhar:', err);
+                }
+            } else {
+                alert('Seu navegador não suporta compartilhamento direto 😢');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
